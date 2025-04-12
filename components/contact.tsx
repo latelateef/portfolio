@@ -8,10 +8,11 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from "lucide-r
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/components/ui/use-toast"
+import { toast } from "sonner"
+
 
 export function Contact() {
-  const { toast } = useToast()
+  // const { toast } = useToast()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,10 +33,13 @@ export function Contact() {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    toast({
-      title: "Message sent!",
+    toast("Message sent!", {
       description: "Thanks for reaching out. I'll get back to you soon.",
-      duration: 3000
+      action: {
+        label: "Close",
+        onClick: () => console.log("Close"),
+      },
+      duration: 3000,
     })
 
     setFormData({
