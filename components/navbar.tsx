@@ -28,6 +28,7 @@ export function Navbar() {
     { name: "Education", href: "#education" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
+    { name: "Resume", href: "https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link", target: "_blank" }
   ]
 
   return (
@@ -49,6 +50,7 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                target={link.target ? "_blank" : undefined}
                 className="text-sm font-medium hover:text-gray-600 dark:hover:text-gray-500 transition-colors"
               >
                 {link.name}
@@ -78,8 +80,19 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
+                  target={link.target ? "_blank" : undefined}
                   className="block px-3 py-2 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 rounded-md"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.querySelector(link.href);
+                    if (el) {
+                      setIsMobileMenuOpen(false); // Close menu first
+                      // Delay scroll a bit to allow layout to settle
+                      setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }, 100); // tweak as needed based on animation duration
+                    }
+                  }}
                 >
                   {link.name}
                 </a>

@@ -75,7 +75,7 @@ export function Contact() {
                 <Mail className="w-5 h-5 mt-1 mr-3" />
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <a href="mailto:hello@johndoe.com" className="text-gray-600 dark:text-gray-400 hover:underline">
+                  <a href="mailto:sainishubham9928@gmail.com" className="text-gray-600 dark:text-gray-400 hover:underline">
                     sainishubham9928@gmail.com
                   </a>
                 </div>
@@ -85,7 +85,7 @@ export function Contact() {
                 <Phone className="w-5 h-5 mt-1 mr-3" />
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <a href="tel:+11234567890" className="text-gray-600 dark:text-gray-400 hover:underline">
+                  <a href="tel:+919024370492" className="text-gray-600 dark:text-gray-400 hover:underline">
                     +91 90243 70492
                   </a>
                 </div>
