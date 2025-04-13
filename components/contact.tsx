@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from "lucide-react"
+import { Mail, MapPin, Send, Github, Linkedin, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -100,16 +100,6 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-{/* 
-              <div className="flex items-start">
-                <Phone className="w-5 h-5 mt-1 mr-3" />
-                <div>
-                  <h4 className="font-medium">Phone</h4>
-                  <a href="tel:+919024370492" className="text-gray-600 dark:text-gray-400 hover:underline">
-                    +91 90243 70492
-                  </a>
-                </div>
-              </div> */}
 
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mt-1 mr-3" />
