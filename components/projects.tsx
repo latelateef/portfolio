@@ -21,9 +21,9 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce",
+    title: "MicroMart",
     description: "A modern e-commerce platform with microservices architecture.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/micromart.png?height=600&width=800",
     tags: ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Docker"],
     github: "https://github.com/latelateef/E-commerce-Microservices",
     // demo: "https://example.com",
