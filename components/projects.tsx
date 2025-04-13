@@ -6,6 +6,7 @@ import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
+
 type Project = {
   id: number
   title: string
@@ -83,7 +84,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="dark:bg-black text-white">
-      <div className="section-container w-[65%]">
+      <div className="section-container lg:w-[65%] w-[90%]">
         <h2 className="section-title text-black dark:text-white">Projects</h2>
         <p className="section-subtitle text-gray-700 dark:text-gray-300">Selected works I've built</p>
 
@@ -92,13 +93,13 @@ export function Projects() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-24"
+          className="grid grid-cols-1 md:grid-cols-2 lg:gap-24 gap-12"
         >
           {projects.map((project) => (
             <motion.div key={project.id} variants={item} className="group" onClick={() => setSelectedProject(project)}>
-              <div className="overflow-hidden rounded-lg dark:bg-black border border-gray-800 shadow-md hover:shadow-xl  duration-300 cursor-pointer h-full flex flex-col group-hover:border-slate-700 group-hover:scale-105 transition-transform ease-in-out">
+              <div className="overflow-hidden rounded-lg dark:bg-black border border-zinc-800 shadow-md hover:shadow-xl  duration-300 cursor-pointer h-full flex flex-col group-hover:border-blue-500 group-hover:scale-105 transition-transform ease-in-out">
                 <div className="relative overflow-hidden">
-                  <div className="aspect-video bg-gray-800">
+                  <div className="aspect-video bg-zinc-800">
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
@@ -111,12 +112,14 @@ export function Projects() {
                   <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-xs font-medium text-gray-500 dark:text-gray-200">
+                      <span key={tag} className="px-3 py-1 bg-black dark:bg-zinc-700 rounded-full text-xs font-medium text-white dark:text-zinc-200">
                         {tag}
                       </span>
+                     
                     ))}
                   </div>
-                  <Button variant="outline" className="w-full border-gray-300 dark:border-white-100 text-black dark:text-white dark:hover:bg-gray-800 hover:bg-gray-300">
+                  <Button variant="outline" className="w-full border-gray-300 dark:border-zinc-800 text-black dark:text-white dark:hover:bg-zinc-700 
+                  hover:bg-zinc-300">
                     View Details
                   </Button>
                 </div>

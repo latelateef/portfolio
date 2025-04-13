@@ -33,7 +33,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-gray-800 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-150 border-b border-gray-800 ${
         isScrolled ? "bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >

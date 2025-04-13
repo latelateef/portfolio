@@ -55,7 +55,7 @@ export function Education() {
                 <div className="hidden md:block absolute left-2 top-10 bottom-0 w-px bg-gray-200 dark:bg-gray-800 ml-4 md:ml-[9.5rem] h-32"></div>
 
                 {/* Circle marker */}
-                <div className="absolute left-0 top-20 w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center md:left-auto md:ml-36">
+                <div className="absolute hidden left-0 top-20 w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 md:flex items-center justify-center md:left-auto md:ml-36">
                   <GraduationCap className="w-4 h-4" />
                 </div>
 

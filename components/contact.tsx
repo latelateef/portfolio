@@ -29,28 +29,48 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    toast("Message sent!", {
-      description: "Thanks for reaching out. I'll get back to you soon.",
-      action: {
-        label: "Close",
-        onClick: () => console.log("Close"),
-      },
-      duration: 3000,
-    })
-
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
+  
+    try {
+      const response = await fetch("https://formbold.com/s/67pY8", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+  
+      if (response.ok) {
+        toast("Message sent!", {
+          description: "Thanks for reaching out. I'll get back to you soon.",
+          action: {
+            label: "Close",
+            onClick: () => console.log("Close"),
+          },
+          duration: 3000,
+        })
+  
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        toast("Something went wrong", {
+          description: "Please try again later.",
+          duration: 3000,
+        })
+      }
+    } catch (error) {
+      toast("Error", {
+        description: "There was a problem sending the message.",
+        duration: 3000,
+      })
+    }
+  
     setIsSubmitting(false)
   }
-
+  
   return (
     <section id="contact" className="bg-white dark:bg-black">
       <div className="section-container">
@@ -80,7 +100,7 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-
+{/* 
               <div className="flex items-start">
                 <Phone className="w-5 h-5 mt-1 mr-3" />
                 <div>
@@ -89,7 +109,7 @@ export function Contact() {
                     +91 90243 70492
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mt-1 mr-3" />
