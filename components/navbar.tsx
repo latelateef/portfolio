@@ -96,7 +96,7 @@ export function Navbar() {
                 >
                   {link.name}
                 </a>
-              ))
+              ))}
 <a href="https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link" target="_blank"
 className="block px-3 py-2 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 rounded-md"
 >Resume</a>
