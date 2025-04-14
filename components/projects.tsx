@@ -21,46 +21,46 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce platform ",
+    title: "E-Commerce",
+    description: "A modern e-commerce platform with microservices architecture.",
     image: "/placeholder.svg?height=600&width=800",
-    tags: ["Next.js", "Tailwind CSS", "FastAPI"],
-    github: "https://github.com/latelateef/eazy-parking-mern",
-    demo: "https://example.com",
+    tags: ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Docker"],
+    github: "https://github.com/latelateef/E-commerce-Microservices",
+    // demo: "https://example.com",
     longDescription:
       "A comprehensive e-commerce solution featuring product listings, cart functionality, secure checkout with Stripe, user authentication, and order management. Built with performance and SEO in mind using Next.js server components and optimized image loading.",
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "A minimalist portfolio website",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["React", "Framer Motion", "Styled Components"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    title: "Eazy Parking",
+    description: "Online Parking Management System",
+    image: "/eazyparking.png?height=600&width=800",
+    tags: ["Node.js", "Express", "React", "Google OAuth", "Prisma ORM", "MySQL"],
+    github: "https://github.com/latelateef/eazy-parking-mern",
+    demo: "https://eazyparking.tech",
     longDescription:
-      "A visually striking portfolio website designed for a professional photographer. Features smooth page transitions, image galleries with lightbox functionality, and contact form integration. Optimized for all device sizes with a focus on showcasing visual content.",
+      "A user-friendly parking management system built with React, Node.js, Express, and Prisma ORM, designed for performance and a seamless user experience. It enables users to find, book, and manage parking spaces with real-time availability updates, and booking history. The system supports Google OAuth for secure authentication, and features separate dashboards for users and admins."
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A productivity app for managing tasks and projects.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["React", "Redux", "Firebase", "Material UI"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    title: "Expense Tracker Bot",
+    description: "A WhatsApp bot for tracking expenses.",
+    image: "/whatsapp.jpg?height=600&width=800",
+    tags: ["Flask", "SQLlite", "Twilio API", "Langchain", "Python", "Gemini API", "NLP"],
+    github: "https://github.com/latelateef/expense-tracker-whatsapp-bot",
+    // demo: "https://example.com",
     longDescription:
-      "A comprehensive task management application with features like task creation, project organization, due dates, priority levels, and team collaboration. Includes user authentication, real-time updates, and data synchronization across devices.",
+      "A WhatsApp bot that allows users to track their expenses through a conversational interface. Users can add, and view expenses using natural language commands. The bot uses Twilio API for WhatsApp integration and stores data in a SQLite database. It also provides insights and summaries of spending habits.",
   },
   {
     id: 4,
-    title: "Weather Dashboard",
-    description: "A weather dashboard with data visualization.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["JavaScript", "Chart.js", "Weather API", "CSS Grid"],
-    github: "https://github.com",
+    title: "FB Thinker",
+    description: "A product review summarization and classification system.",
+    image: "/fbthinker.jpg?height=600&width=800",
+    tags: ["Python", "Hugging Face Transf ormers", "PyTorch"],
+    github: "https://github.com/latelateef/FB-THINKER-ENGLISH",
     longDescription:
-      "An interactive weather dashboard that provides current conditions, forecasts, and historical weather data. Features include location search, unit conversion, and interactive charts for temperature, precipitation, and wind patterns.",
+      "A product review summarization and classification system that uses Hugging Face Transformers and PyTorch. It provides a user-friendly interface for users to input product reviews and receive summarized insights and classifications.",
   },
 ]
 
@@ -115,7 +115,7 @@ export function Projects() {
                       <span key={tag} className="px-3 py-1 bg-black dark:bg-zinc-700 rounded-full text-xs font-medium text-white dark:text-zinc-200">
                         {tag}
                       </span>
-                     
+
                     ))}
                   </div>
                   <Button variant="outline" className="w-full border-gray-300 dark:border-zinc-800 text-black dark:text-white dark:hover:bg-zinc-700 
