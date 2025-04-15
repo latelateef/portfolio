@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ModeToggle } from "./mode-toggle"
-import { Menu, X } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import { ModeToggle } from "./mode-toggle";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -28,12 +28,14 @@ export function Navbar() {
     { name: "Education", href: "#education" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-150 border-b border-gray-800 ${
-        isScrolled ? "bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
@@ -54,14 +56,21 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a href="https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link" target="_blank"
-            className="text-sm font-medium hover:text-gray-600 dark:hover:text-gray-500 transition-colors"
-            >Resume</a>
+            <a
+              href="https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link"
+              target="_blank"
+              className="text-sm font-medium hover:text-gray-600 dark:hover:text-gray-500 transition-colors"
+            >
+              Resume
+            </a>
           </nav>
 
           <div className="flex items-center space-x-4">
             <ModeToggle />
-            <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <button
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -89,7 +98,10 @@ export function Navbar() {
                       setIsMobileMenuOpen(false); // Close menu first
                       // Delay scroll a bit to allow layout to settle
                       setTimeout(() => {
-                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
                       }, 100); // tweak as needed based on animation duration
                     }
                   }}
@@ -97,13 +109,17 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-<a href="https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link" target="_blank"
-className="block px-3 py-2 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 rounded-md"
->Resume</a>
+              <a
+                href="https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link"
+                target="_blank"
+                className="block px-3 py-2 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 rounded-md"
+              >
+                Resume
+              </a>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }
