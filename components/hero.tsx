@@ -29,7 +29,7 @@ export function Hero() {
               <a href="#projects">View Projects</a>
             </Button>
             <Button variant="outline" asChild className="px-8 py-6 text-base transition-all duration-0">
-              <a href="#contact">Get in Touch</a>
+              <a href="https://drive.google.com/file/d/1szLxTPjSzjyu3-xOQ4fE8I2DE6Eyy1k6/view?usp=drive_link" target="_blank">Resume</a>
             </Button>
           </div>
 
