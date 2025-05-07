@@ -41,7 +41,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Education
         </h2>
         <p className="section-subtitle md:-mb-10">
-        Academic background and certifications
+        Academic background
         </p>
       </div>
 

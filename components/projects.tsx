@@ -57,7 +57,7 @@ const projects: Project[] = [
     title: "FB Thinker",
     description: "A product review summarization and classification system.",
     image: "/fbthinker.jpg?height=600&width=800",
-    tags: ["Python", "Hugging Face Transf ormers", "PyTorch"],
+    tags: ["Python", "Hugging Face Transformers", "PyTorch"],
     github: "https://github.com/latelateef/FB-THINKER-ENGLISH",
     longDescription:
       "A product review summarization and classification system that uses Hugging Face Transformers and PyTorch. It provides a user-friendly interface for users to input product reviews and receive summarized insights and classifications.",
