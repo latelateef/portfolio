@@ -11,7 +11,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Designed and built with ❤️ by Shubham</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Made with ❤️ by Shubham</p>
           </div>
         </div>
       </div>

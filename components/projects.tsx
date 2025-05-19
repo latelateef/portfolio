@@ -21,17 +21,6 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "MicroMart",
-    description: "A modern e-commerce platform with microservices architecture.",
-    image: "/micromart.png?height=600&width=800",
-    tags: ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Docker"],
-    github: "https://github.com/latelateef/E-commerce-Microservices",
-    // demo: "https://example.com",
-    longDescription:
-      "A comprehensive e-commerce solution featuring product listings, cart functionality, secure checkout with Stripe, user authentication, and order management. Built with performance and SEO in mind using Next.js server components and optimized image loading.",
-  },
-  {
-    id: 2,
     title: "Eazy Parking",
     description: "Online Parking Management System",
     image: "/eazyparking.png?height=600&width=800",
@@ -42,7 +31,7 @@ const projects: Project[] = [
       "A user-friendly parking management system built with React, Node.js, Express, and Prisma ORM, designed for performance and a seamless user experience. It enables users to find, book, and manage parking spaces with real-time availability updates, and booking history. The system supports Google OAuth for secure authentication, and features separate dashboards for users and admins."
   },
   {
-    id: 3,
+    id: 2,
     title: "Expense Tracker Bot",
     description: "A WhatsApp bot for tracking expenses.",
     image: "/whatsapp.jpg?height=600&width=800",
@@ -51,6 +40,17 @@ const projects: Project[] = [
     // demo: "https://example.com",
     longDescription:
       "A WhatsApp bot that allows users to track their expenses through a conversational interface. Users can add, and view expenses using natural language commands. The bot uses Twilio API for WhatsApp integration and stores data in a SQLite database. It also provides insights and summaries of spending habits.",
+  },
+    {
+    id: 3,
+    title: "MicroMart",
+    description: "A modern e-commerce platform with microservices architecture.",
+    image: "/micromart.png?height=600&width=800",
+    tags: ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Docker"],
+    github: "https://github.com/latelateef/E-commerce-Microservices",
+    // demo: "https://example.com",
+    longDescription:
+      "A comprehensive e-commerce solution featuring product listings, cart functionality, secure checkout with Stripe, user authentication, and order management. Built with performance and SEO in mind using Next.js server components and optimized image loading.",
   },
   {
     id: 4,
