@@ -12,7 +12,6 @@ import { toast } from "sonner"
 
 
 export function Contact() {
-  // const { toast } = useToast()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -72,7 +71,7 @@ export function Contact() {
   }
   
   return (
-    <section id="contact" className="bg-white dark:bg-black">
+    <section id="contact" className="bg-white dark:bg-black md:px-28">
       <div className="section-container">
         <h2 className="section-title">Contact</h2>
         <p className="section-subtitle">Get in touch with me</p>
@@ -173,20 +172,6 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your email"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Subject"
                   required
                 />
               </div>

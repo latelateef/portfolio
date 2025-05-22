@@ -62,7 +62,7 @@ export function Education() {
   ];
 
   return (
-    <div id="education" className="w-full">
+    <div id="education" className="w-full md:pl-10">
       <Timeline data={data} />
     </div>
   );

@@ -25,7 +25,7 @@ const skills: Skill[] = [
   { name: "SQL", category: "other" },
   { name: "LangChain", category: "other" },
   { name: "REST APIs", category: "other" },
-  { name: "Authentication (JWT, OAuth)", category: "other" }
+  { name: "JWT, OAuth", category: "other" }
 ]
 
 export function Skills() {
@@ -37,7 +37,7 @@ export function Skills() {
   ]
 
   return (
-    <section id="skills" className="bg-white dark:bg-black text-black dark:text-white">
+    <section id="skills" className="bg-white dark:bg-black text-black dark:text-white lg:px-32">
       <div className="section-container">
         <h2 className="section-title text-black dark:text-white">Skills</h2>
         <p className="section-subtitle text-gray-700 dark:text-gray-300">Technologies and tools I work with</p>
@@ -50,28 +50,30 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="p-6 rounded-lg border border-gray-800 dark:border-gray-800 shadow-lg"
+              className=""
             >
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-gray-200 dark:bg-gray-900 rounded-lg mr-4">{category.icon}</div>
-                <h3 className="text-xl font-bold">{category.name}</h3>
-              </div>
+              <div className="p-6 rounded-lg border border-gray-800 dark:border-gray-800 shadow-lg hover:shadow-xl duration-300 cursor-pointer h-full flex flex-col hover:scale-105 transition-transform ease-in-out">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gray-200 dark:bg-gray-900 rounded-lg mr-4">{category.icon}</div>
+                  <h3 className="text-xl font-bold">{category.name}</h3>
+                </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {skills
-                  .filter((skill) => skill.category === category.id)
-                  .map((skill, index) => (
-                    <motion.div
-                      key={skill.name}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-center p-3 border border-white-100 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-900 transition-colors"
-                    >
-                      <span className="font-medium">{skill.name}</span>
-                    </motion.div>
-                  ))}
+                <div className="grid grid-cols-2 gap-4">
+                  {skills
+                    .filter((skill) => skill.category === category.id)
+                    .map((skill, index) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-center p-3 border border-white-100 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-900 transition-colors"
+                      >
+                        <span className="font-medium">{skill.name}</span>
+                      </motion.div>
+                    ))}
+                </div>
               </div>
             </motion.div>
           ))}
