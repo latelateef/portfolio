@@ -30,22 +30,6 @@ export function Education() {
       ),
     },
     {
-      title: "2022",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-2xl font-semibold mb-1">
-            JEE Mains & Advanced
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 mb-2 text-lg">
-            Secured AIR 3009 in JEE Mains with a percentile of 99.67.
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 mb-4 text-lg">
-            Qualified JEE Advanced with an AIR of 5427.
-          </p>
-        </div>
-      ),
-    },
-    {
       title: "2021",
       content: (
         <div>

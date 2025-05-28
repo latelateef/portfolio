@@ -13,7 +13,7 @@ const skills: Skill[] = [
   { name: "JavaScript / TypeScript", category: "languages" },
   { name: "Python", category: "languages" },
   { name: "C++", category: "languages" },
-  { name: "React / Next.js", category: "frameworks" },
+  { name: "React", category: "frameworks" },
   { name: "Tailwind CSS", category: "frameworks" },
   { name: "Node.js", category: "frameworks" },
   { name: "Express", category: "frameworks" },

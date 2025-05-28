@@ -46,7 +46,7 @@ const projects: Project[] = [
     title: "MicroMart",
     description: "A modern e-commerce platform with microservices architecture.",
     image: "/micromart.png?height=600&width=800",
-    tags: ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Docker"],
+    tags: ["React", "Tailwind CSS", "FastAPI", "MongoDB", "Docker"],
     github: "https://github.com/latelateef/E-commerce-Microservices",
     // demo: "https://example.com",
     longDescription:
